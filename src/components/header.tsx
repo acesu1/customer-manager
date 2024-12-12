@@ -3,6 +3,8 @@ import { Scissors } from 'lucide-react'
 import { NavLink } from './nav-link'
 import { ThemeToggle } from './theme-toggle'
 import { Separator } from './ui/separator'
+import { Authenticated, Unauthenticated } from 'convex/react'
+import { SignInButton, UserButton } from '@clerk/clerk-react'
 
 export function Header() {
   return (
@@ -22,6 +24,12 @@ export function Header() {
         </nav>
 
         <div className="ml-auto flex items-center space-x-2">
+          <Unauthenticated>
+            <SignInButton />
+          </Unauthenticated>
+          <Authenticated>
+            <UserButton />
+          </Authenticated>
           <ThemeToggle />
         </div>
       </div>
