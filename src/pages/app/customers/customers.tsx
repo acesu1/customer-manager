@@ -9,6 +9,8 @@ import {
 
 import { Button } from '@/components/ui/button'
 import { ArrowRight, Search, X } from 'lucide-react'
+import { Dialog, DialogTrigger } from '@/components/ui/dialog'
+import { ServiceDetails } from './service-details'
 
 export function Customers() {
   return (
@@ -33,10 +35,16 @@ export function Customers() {
                 return (
                   <TableRow key={i}>
                     <TableCell>
-                      <Button variant="outline" size="xs">
-                        <Search className="size-3" />
-                        <span className="sr-only">Detalhes do serviço</span>
-                      </Button>
+                      <Dialog>
+                        <DialogTrigger asChild>
+                          <Button variant="outline" size="xs">
+                            <Search className="size-3" />
+                            <span className="sr-only">Detalhes do serviço</span>
+                          </Button>
+                        </DialogTrigger>
+
+                        <ServiceDetails />
+                      </Dialog>
                     </TableCell>
 
                     <TableCell className="font-mono text-xs font-medium">

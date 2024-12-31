@@ -2,7 +2,7 @@ import { createBrowserRouter } from 'react-router-dom'
 
 import { AppLayout } from './pages/_layouts/app'
 import { Dashboard } from './pages/app'
-import { Customers } from './pages/app/customers'
+import { Customers } from './pages/app/customers/customers'
 
 export const router = createBrowserRouter([
   {
