@@ -1,4 +1,5 @@
 import { Area, AreaChart, CartesianGrid, XAxis } from 'recharts'
+import { Label } from '@/components/ui/label'
 
 import {
   Card,
@@ -7,12 +8,14 @@ import {
   CardHeader,
   CardTitle,
 } from '@/components/ui/card'
+
 import {
   ChartConfig,
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
 } from '@/components/ui/chart'
+import { DateRangePicker } from '@/components/ui/date-range-picker'
 
 const chartData = [
   { month: 'January', desktop: 186 },
@@ -33,11 +36,18 @@ const chartConfig = {
 export function ReceiptChart() {
   return (
     <Card>
-      <CardHeader>
-        <CardTitle>Receita no período</CardTitle>
-        <CardDescription>
-          Receita diária no período
-        </CardDescription>
+      <CardHeader className="flex flex-row justify-between">
+        <div className="space-y-1">
+          <CardTitle>Receita no período</CardTitle>
+          <CardDescription>
+            Receita diária no período
+          </CardDescription>
+        </div>
+
+        <div className="flex items-center gap-3">
+          <Label>Período</Label>
+          <DateRangePicker />
+        </div>
       </CardHeader>
       <CardContent>
         <ChartContainer config={chartConfig} className="w-full h-[240px]">
