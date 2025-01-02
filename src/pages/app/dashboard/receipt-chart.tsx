@@ -35,7 +35,7 @@ const chartConfig = {
 
 export function ReceiptChart() {
   return (
-    <Card>
+    <Card className="col-span-6">
       <CardHeader className="flex flex-row justify-between">
         <div className="space-y-1">
           <CardTitle>Receita no período</CardTitle>

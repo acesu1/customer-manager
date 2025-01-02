@@ -51,7 +51,7 @@ const chartConfig = {
 
 export function PopularServicesChart() {
   return (
-    <Card className="flex flex-col">
+    <Card className="col-span-3">
       <CardHeader className="pb-0">
         <CardTitle>Serviços populares</CardTitle>
         <CardDescription>Os 5 serviços mais solicitados</CardDescription>
@@ -59,7 +59,7 @@ export function PopularServicesChart() {
       <CardContent className="flex-1 pb-0">
         <ChartContainer
           config={chartConfig}
-          className="mx-auto aspect-square h-[288px] pb-0 [&_.recharts-pie-label-text]:fill-foreground"
+          className="mx-auto aspect-square h-[250px] pb-0 [&_.recharts-pie-label-text]:fill-foreground"
         >
           <PieChart>
             <ChartTooltip content={<ChartTooltipContent hideLabel />} />
