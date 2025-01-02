@@ -1,6 +1,7 @@
-import { ReceiptChart } from './receipt-chart'
-import { PopularServicesChart } from './popular-services-chart'
+import { MonthCustomersAmountCard } from './month-customers-amount-card'
 import { MonthReceiptCard } from './month-receipt-card'
+import { PopularServicesChart } from './popular-services-chart'
+import { ReceiptChart } from './receipt-chart'
 
 export function Dashboard() {
   return (
@@ -9,6 +10,7 @@ export function Dashboard() {
 
       <div className="grid grid-cols-4 gap-4">
         <MonthReceiptCard />
+        <MonthCustomersAmountCard />
       </div>
 
       <div className="grid grid-cols-9 gap-4">
