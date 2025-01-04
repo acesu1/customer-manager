@@ -9,7 +9,6 @@ export function DayServicesAmountCard() {
         <Scissors className="h-4 w-4 text-muted-foreground" />
       </CardHeader>
       <CardContent className="space-y-1">
-
         <>
           <span className="text-2xl font-bold">
             0
