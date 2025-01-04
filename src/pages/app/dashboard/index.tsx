@@ -1,4 +1,5 @@
 import { DayServicesAmountCard } from './day-services-amount-card'
+import { MonthCanceledServicesAmountCard } from './month-canceled-services-amount-card'
 import { MonthCustomersAmountCard } from './month-customers-amount-card'
 import { MonthReceiptCard } from './month-receipt-card'
 import { PopularServicesChart } from './popular-services-chart'
@@ -13,6 +14,7 @@ export function Dashboard() {
         <MonthReceiptCard />
         <MonthCustomersAmountCard />
         <DayServicesAmountCard />
+        <MonthCanceledServicesAmountCard />
       </div>
 
       <div className="grid grid-cols-9 gap-4">
