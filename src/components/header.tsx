@@ -1,15 +1,9 @@
 import { Scissors } from 'lucide-react'
 
+import { AccountMenu } from './account-menu'
 import { NavLink } from './nav-link'
 import { ThemeToggle } from './theme-toggle'
 import { Separator } from './ui/separator'
-
-import {
-  SignedIn,
-  SignedOut,
-  SignInButton,
-  UserButton,
-} from '@clerk/clerk-react'
 
 export function Header() {
   return (
@@ -26,12 +20,7 @@ export function Header() {
 
         <div className="ml-auto flex items-center space-x-2">
           <ThemeToggle />
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
+          <AccountMenu />
         </div>
       </div>
     </div>
