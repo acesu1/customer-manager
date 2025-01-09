@@ -1,4 +1,4 @@
-import { SignInButton, useClerk } from '@clerk/clerk-react'
+import { SignInButton, useClerk, useUser } from '@clerk/clerk-react'
 import { Building, ChevronDown, LogOut } from 'lucide-react'
 
 import { Button } from './ui/button'
@@ -17,6 +17,7 @@ import {
 import { SignedIn, SignedOut } from '@clerk/clerk-react'
 
 export function AccountMenu() {
+  const { user } = useUser()
   const { signOut, openUserProfile } = useClerk()
 
   return (
@@ -36,9 +37,9 @@ export function AccountMenu() {
             <DropdownMenuContent align="end" className="w-60">
               <DropdownMenuLabel className="flex flex-col">
                 <>
-                  Douglas Souza
+                  {user?.fullName}
                   <span className="text-xs font-normal text-muted-foreground">
-                    dev@hotmail.com
+                    {user?.emailAddresses[0].emailAddress}
                   </span>
                 </>
               </DropdownMenuLabel>
